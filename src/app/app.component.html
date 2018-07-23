@@ -1,3 +1,4 @@
-<app-main-nav>
+<app-main-nav (newEvent)="outputExampleNewEmit($event)">
   <button mat-raised-button (click)="onClickEvent()">Click Me</button>
+  <app-home (outputExampleEmit)="outputExampleEmit($event)"></app-home>
 </app-main-nav>

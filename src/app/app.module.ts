@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent
+    MainNavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {
   BreakpointObserver,
   Breakpoints,
@@ -13,9 +13,23 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./main-nav.component.css']
 })
 export class MainNavComponent {
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(map(result => result.matches));
+  @Output() newEvent: any = new EventEmitter<any>();
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  newBreakpoint = '(min-width: 1440px) and (max-width: 1600px)';
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(this.newBreakpoint)
+    .pipe(
+      map(result => {
+        return result.matches;
+      })
+    );
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    console.log(this.breakpointObserver);
+    console.log(Breakpoints);
+  }
+
+  onClickNewEvent() {
+    this.newEvent.emit(true);
+  }
 }
