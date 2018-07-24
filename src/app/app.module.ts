@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -7,15 +7,20 @@ import { MaterialModule } from './material.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainNavComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, MainNavComponent, HomeComponent],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     MaterialModule,
     BrowserAnimationsModule,
     LayoutModule
@@ -23,4 +28,4 @@ import { HomeComponent } from './home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
