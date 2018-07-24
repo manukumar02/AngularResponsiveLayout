@@ -1,9 +1,9 @@
-<div class="spinner" *ngIf="loading">
-  <mat-spinner></mat-spinner>
+<div class="spinner-div" *ngIf="loading">
+  <mat-spinner class="spinner"></mat-spinner>
 </div>
 <app-main-nav (newEvent)="outputExampleNewEmit($event)">
   <button mat-raised-button (click)="onClickEvent()">Click Me</button>
   <app-home (outputExampleEmit)="outputExampleEmit($event)"></app-home>
 </app-main-nav>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
