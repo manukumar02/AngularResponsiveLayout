@@ -8,6 +8,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 
 const appRoutes: Routes = [
   {
@@ -17,7 +18,12 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    MainNavComponent,
+    HomeComponent,
+    MainDashboardComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
