@@ -35,7 +35,7 @@ export class AppComponent {
     ) {
       setTimeout(() => {
         this.loading = false;
-      }, 5000);
+      }, 1000);
     }
   }
 

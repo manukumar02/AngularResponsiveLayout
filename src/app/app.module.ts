@@ -9,6 +9,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { BlackjackComponent } from './blackjack/blackjack.component';
 
 const appRoutes: Routes = [
   {
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     MainNavComponent,
     HomeComponent,
-    MainDashboardComponent
+    MainDashboardComponent,
+    BlackjackComponent
   ],
   imports: [
     BrowserModule,

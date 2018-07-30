@@ -1,0 +1,22 @@
+<!-- <h1 class="mat-h1">
+  Deck - {{deck.length}}
+</h1>
+<div *ngFor="let dec of deck">
+  <span>{{dec.value}} of {{dec.suit}}</span>
+  <br>
+</div> -->
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Blackjack</mat-card-title>
+        <mat-card-subtitle>by Manu Sharma</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p id="text-area">{{introMessage}}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button *ngIf="isNewGame" (click)="blackjackNewGame()" color="primary">New Game</button>
+        <button mat-raised-button *ngIf="isHit" (click)="blackjackHit()" color="primary">Hit !</button>
+        <button mat-raised-button *ngIf="isStay" (click)="blackjackStay()" color="primary">Stay</button>
+    </mat-card-actions>
+</mat-card>
